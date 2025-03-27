@@ -40,7 +40,17 @@ app.post('/sessions', async (req, res) => {
       res.status(500).json({ error: 'Internal Server Error' });
     }
   });
-
+// Nouvelle route GET
+  app.get('/sessions', async (req, res) => {
+    try {
+      const sessions = await prisma.session.findMany();
+      res.status(200).json(sessions);
+    } catch (error) {
+      console.error('Error fetching sessions:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  });
+  
 // Démarrage du serveur
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
