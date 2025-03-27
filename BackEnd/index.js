@@ -43,7 +43,12 @@ app.post('/sessions', async (req, res) => {
 // Nouvelle route GET
   app.get('/sessions', async (req, res) => {
     try {
-      const sessions = await prisma.session.findMany();
+      // Récupération du paramètre de la requête
+      const {userId} = req.query;
+      // Si un userId a été donné alors on construit une requête de récupération de session par utilisateur sinon normal
+      const filter = userId ? { where : { userId: parseInt(userId)}} : {};
+      
+      const sessions = await prisma.session.findMany(filter);
       res.status(200).json(sessions);
     } catch (error) {
       console.error('Error fetching sessions:', error);
