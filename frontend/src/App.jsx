@@ -1,14 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import SessionList from "./sessionList";
 
 function App() {
   return (
-    <div className="p-6 text-center">
-      <h1 className="text-3xl font-bold text-blue-600">
-        Tailwind fonctionne 🎉
+    <div className="p-6 max-w-3xl mx-auto">
+      <h1 className="text-3xl font-bold text-blue-600 text-center">
+        FocusTime Sessions 📊
       </h1>
+      <SessionList />
     </div>
   );
 }
