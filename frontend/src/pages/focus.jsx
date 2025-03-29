@@ -32,6 +32,7 @@ function Focus() {
         .then((data) => {
           console.log("Session saved:", data);
           alert("✅ Focus session saved!");
+          setTimeLeft(focusDuration); // on remet le timer à 25 min pour recommencer
         })
         .catch((err) => {
           console.error("Failed to save session:", err);
