@@ -53,36 +53,38 @@ function Focus() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-6">
-      <h1 className="text-2xl font-semibold text-blue-600">Pomodoro Timer 🍅</h1>
+    <div className="bg-white shadow-md rounded-xl p-8 w-full max-w-md">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 px-4 text-center">
+        <h1 className="text-2xl font-semibold text-blue-600">Pomodoro Timer 🍅</h1>
 
-      <input
-        type="text"
-        value={tag}
-        onChange={(e) => setTag(e.target.value)}
-        placeholder="Enter session tag (ex: dev, sport...)"
-        className="border rounded px-3 py-2 mb-4"
-      />
+        <input
+          type="text"
+          value={tag}
+          onChange={(e) => setTag(e.target.value)}
+          placeholder="Enter session tag (ex: dev, sport...)"
+          className="border rounded px-3 py-2 mb-4"
+        />
 
-      <div className="text-6xl font-mono text-gray-800">{formatTime(timeLeft)}</div>
+        <div className="text-6xl font-mono text-gray-800">{formatTime(timeLeft)}</div>
 
-      <div className="flex gap-4">
-        <button
-          onClick={() => setIsRunning(!isRunning)}
-          className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
-        >
-          {isRunning ? "Pause" : "Start"}
-        </button>
+        <div className="flex gap-4">
+          <button
+            onClick={() => setIsRunning(!isRunning)}
+            className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+          >
+            {isRunning ? "Pause" : "Start"}
+          </button>
 
-        <button
-          onClick={() => {
-            setIsRunning(false);
-            setTimeLeft(focusDuration);
-          }}
-          className="bg-gray-300 px-6 py-2 rounded hover:bg-gray-400 transition"
-        >
-          Reset
-        </button>
+          <button
+            onClick={() => {
+              setIsRunning(false);
+              setTimeLeft(focusDuration);
+            }}
+            className="bg-gray-300 px-6 py-2 rounded hover:bg-gray-400 transition"
+          >
+            Reset
+          </button>
+        </div>
       </div>
     </div>
   );
