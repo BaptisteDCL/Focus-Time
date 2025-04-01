@@ -2,6 +2,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/home";
 import Sessions from "./pages/sessions";
 import Focus from "./pages/focus";
+import CreateSession from "./pages/createSession";
 
 function App() {
   return (
@@ -17,13 +18,21 @@ function App() {
             Sessions
           </Link>
         </div>
+        <div className="space-x-4">
+          <Link to="/create" className="text-gray-700 hover:text-blue-600">
+            Créer une session
+          </Link>
+        </div>
       </nav>
 
+      <main className="flex-grow">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/focus" element={<Focus />} />
         <Route path="/sessions" element={<Sessions />} />
+        <Route path="/create" element={<CreateSession />} />
       </Routes>
+      </main>
     </div>
   );
 }
