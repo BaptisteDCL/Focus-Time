@@ -24,15 +24,12 @@ function App() {
           </Link>
         </div>
       </nav>
-
-      <main className="flex-grow">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/focus" element={<Focus />} />
         <Route path="/sessions" element={<Sessions />} />
         <Route path="/create" element={<CreateSession />} />
       </Routes>
-      </main>
     </div>
   );
 }
