@@ -6,8 +6,8 @@ import CreateSession from "./pages/createSession";
 
 function App() {
   return (
-    <div>
-      <nav className="bg-white shadow p-4 flex justify-between items-center">
+    <div className="bg-white shadow p-4 flex justify-between items-center">
+      <nav >
         <div className="space-x-4">
           <Link to="/" className="text-gray-700 hover:text-blue-600">
             Home
