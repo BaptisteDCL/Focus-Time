@@ -53,8 +53,8 @@ function Focus() {
   };
 
   return (
-    <div className="bg-white shadow-md rounded-xl p-8 w-full max-w-md">
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 px-4 text-center">
+    <div className="h-full w-full flex items-center justify-center">
+      <div className="bg-white shadow-lg rounded-xl p-8 w-full max-w-md text-center">
         <h1 className="text-2xl font-semibold text-blue-600">Pomodoro Timer 🍅</h1>
 
         <input
