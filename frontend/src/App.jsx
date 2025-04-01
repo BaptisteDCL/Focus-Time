@@ -20,7 +20,7 @@ function App() {
         </div>
         <div className="space-x-4">
           <Link to="/create" className="text-gray-700 hover:text-blue-600">
-            Créer une session
+            Créer une session manuelle
           </Link>
         </div>
       </nav>
