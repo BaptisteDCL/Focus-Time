@@ -5,8 +5,8 @@ import Focus from "./pages/focus";
 
 function App() {
   return (
-    <div>
-      <nav className="bg-white shadow p-4 flex justify-between items-center">
+    <div className="bg-white shadow p-4 flex justify-between items-center">
+      <nav >
         <div className="space-x-4">
           <Link to="/" className="text-gray-700 hover:text-blue-600">
             Home
@@ -19,11 +19,13 @@ function App() {
         </div>
       </nav>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/focus" element={<Focus />} />
-        <Route path="/sessions" element={<Sessions />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/focus" element={<Focus />} />
+          <Route path="/sessions" element={<Sessions />} />
+        </Routes>
+      </main>
     </div>
   );
 }
