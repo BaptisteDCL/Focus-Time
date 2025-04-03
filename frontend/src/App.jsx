@@ -3,6 +3,7 @@ import Home from "./pages/home";
 import Sessions from "./pages/sessions";
 import Focus from "./pages/focus";
 import CreateSession from "./pages/createSession";
+import Reports from "./pages/Reports";
 
 function App() {
   return (
@@ -23,12 +24,18 @@ function App() {
             Créer une session manuelle
           </Link>
         </div>
+        <div className="space-x-4">
+          <Link to="/reports" className="text-gray-700 hover:text-blue-600">
+            Rapports
+          </Link>
+        </div>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/focus" element={<Focus />} />
         <Route path="/sessions" element={<Sessions />} />
         <Route path="/create" element={<CreateSession />} />
+        <Route path="/reports" element={<Reports />} />
       </Routes>
     </div>
   );
