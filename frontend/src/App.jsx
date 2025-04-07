@@ -8,7 +8,7 @@ import Reports from "./pages/Reports";
 function App() {
   return (
     <div>
-      <nav >
+      <nav className="w-full">
         <div>
           <Link to="/">
             Home
@@ -18,13 +18,9 @@ function App() {
           <Link to="/sessions">
             Sessions
           </Link>
-        </div>
-        <div>
           <Link to="/create">
             Créer une session manuelle
           </Link>
-        </div>
-        <div>
           <Link to="/reports">
             Rapports
           </Link>
