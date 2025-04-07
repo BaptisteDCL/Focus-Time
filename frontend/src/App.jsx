@@ -7,25 +7,25 @@ import Reports from "./pages/Reports";
 
 function App() {
   return (
-    <div className="bg-white shadow p-4 flex justify-between items-center">
+    <div>
       <nav >
-        <div className="space-x-4">
-          <Link to="/" className="text-gray-700 hover:text-blue-600">
+        <div>
+          <Link to="/">
             Home
           </Link>
         </div>
         <div className="space-x-4">
-          <Link to="/sessions" className="text-gray-700 hover:text-blue-600">
+          <Link to="/sessions">
             Sessions
           </Link>
         </div>
-        <div className="space-x-4">
-          <Link to="/create" className="text-gray-700 hover:text-blue-600">
+        <div>
+          <Link to="/create">
             Créer une session manuelle
           </Link>
         </div>
-        <div className="space-x-4">
-          <Link to="/reports" className="text-gray-700 hover:text-blue-600">
+        <div>
+          <Link to="/reports">
             Rapports
           </Link>
         </div>

@@ -53,24 +53,24 @@ function Focus() {
   };
 
   return (
-    <div className="h-full w-full flex items-center justify-center">
-      <div className="bg-white shadow-lg rounded-xl p-8 w-full max-w-md text-center">
-        <h1 className="text-2xl font-semibold text-blue-600">Pomodoro Timer 🍅</h1>
+    <div>
+      <div>
+        <h1>Pomodoro Timer 🍅</h1>
 
         <input
           type="text"
           value={tag}
           onChange={(e) => setTag(e.target.value)}
           placeholder="Enter session tag (ex: dev, sport...)"
-          className="border rounded px-3 py-2 mb-4"
+          className=""
         />
 
-        <div className="text-6xl font-mono text-gray-800">{formatTime(timeLeft)}</div>
+        <div>{formatTime(timeLeft)}</div>
 
-        <div className="flex gap-4">
+        <div>
           <button
             onClick={() => setIsRunning(!isRunning)}
-            className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+            className=""
           >
             {isRunning ? "Pause" : "Start"}
           </button>
@@ -80,7 +80,7 @@ function Focus() {
               setIsRunning(false);
               setTimeLeft(focusDuration);
             }}
-            className="bg-gray-300 px-6 py-2 rounded hover:bg-gray-400 transition"
+            className=""
           >
             Reset
           </button>
